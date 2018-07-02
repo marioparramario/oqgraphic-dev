@@ -1,0 +1,122 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+[data-namespace="illustration"] .navbar {
+  position: fixed;
+  background: white;
+  z-index: 9999;
+  top: 0;
+  width: 100%;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+[data-namespace="illustration"] .navbar .logo svg path,
+[data-namespace="illustration"] .navbar .logo svg polygon {
+  fill: #1C1C1C;
+}
+[data-namespace="illustration"] .navbar .link-container .nav-link {
+  font-family: 'Circular';
+  color: #1C1C1C;
+}
+.hero-illustration {
+  height: 100vh;
+}
+.hero-illustration svg {
+  width: 60%;
+}
+.hero-illustration svg .st0 {
+  fill: none;
+}
+.hero-illustration svg .st1 {
+  fill: #4D8CFD;
+}
+.hero-illustration svg .st2 {
+  fill: #1362D3;
+}
+.hero-illustration svg .st3 {
+  fill: #FF7E64;
+}
+.hero-illustration svg .st4 {
+  fill: #FC3C2D;
+}
+.hero-illustration svg .st5 {
+  fill: #FFF9F2;
+}
+.hero-illustration svg .st6 {
+  fill: url(#SVGID_4_);
+}
+.hero-illustration svg .st7 {
+  fill: url(#SVGID_5_);
+  stroke: url(#SVGID_6_);
+  stroke-miterlimit: 10;
+}
+.hero-illustration svg .st8 {
+  fill: url(#SVGID_7_);
+  stroke: url(#SVGID_8_);
+  stroke-miterlimit: 10;
+}
+.hero-illustration svg .st9 {
+  fill: url(#SVGID_9_);
+}
+.hero-illustration svg .st10 {
+  fill: #3145BD;
+}
+.hero-illustration svg .st11 {
+  fill: #FFE8B6;
+}
+.hero-illustration svg .st12 {
+  fill: url(#SVGID_10_);
+  stroke: url(#SVGID_11_);
+  stroke-miterlimit: 10;
+}
+.hero-illustration svg .st13 {
+  fill: #FED095;
+}
+.hero-illustration .hero-container {
+  width: 40%;
+  -webkit-transform: translateX(-20%);
+  -moz-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  -o-transform: translateX(-20%);
+  transform: translateX(-20%);
+  color: #1C1C1C;
+}
+.hero-illustration .hero-container h3 {
+  font-size: 2.8rem;
+  margin-bottom: 0.3rem;
+}
+.hero-illustration .hero-container p {
+  font-size: 1.1rem;
+  max-width: 30rem;
+}
+.something {
+  opacity: 0;
+}

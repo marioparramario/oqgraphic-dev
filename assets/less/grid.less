@@ -1,0 +1,112 @@
+@import "variables.less";
+
+
+.main {
+  margin-top: 10rem;
+  padding: 0 2em;
+  width: 95%;
+  max-width: 1280px;
+}
+
+
+// #grid {
+// 	&[data-columns]::before {
+// 		content: '3 .column.size-1of3';
+// 	}
+// }
+
+.stack {
+  position: relative;
+}
+.stack__caption {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.grid {
+  width: 100%;
+  &-item {
+    position: relative;
+    overflow: hidden;
+    &-container {
+      // opacity: 0;
+  		padding-bottom: 16px;
+  	}
+    &-image {
+
+    }
+    &-caption {
+  		position: absolute;
+      bottom: 10px;
+      left: 0;
+      opacity: 0;
+      font-size: 1.5rem;
+      font-family: @circular-medium;
+      // transform: translateX(-30px);
+      // opacity: 0;
+  	}
+  }
+
+}
+
+.column {
+	float: left;
+	padding: 0 8px;
+	&:first-child {
+		padding-left: 0
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+}
+.size-1 {
+	&of1 {
+		width: 100%;
+	}
+	&of2 {
+		width: 100% / 2;
+	}
+	&of3 {
+		width: 100% / 3;
+	}
+	&of4 {
+		width: 25%;
+	}
+}
+// .anime {
+// 	opacity: 0;
+// }
+
+[data-namespace="illustration"] {
+  img {
+    width: 100%;
+  	height: 100%;
+  }
+}
+
+
+
+
+@media screen and (max-width: @phone){
+	#grid[data-columns]::before {
+		content: '1 .column.size-1of1';
+	}
+}
+
+@media screen and (min-width: @phone + 1px) and (max-width: @small-tablet) {
+	#grid[data-columns]::before {
+		content: '2 .column.size-1of2';
+	}
+}
+@media screen and (min-width: @small-tablet + 1px) {
+	#grid[data-columns]::before {
+		content: '3 .column.size-1of3';
+	}
+}
+
+@media (max-width: @tablet) {
+  .grid-item-caption {
+    font-size: 1.2rem;
+  }
+}
