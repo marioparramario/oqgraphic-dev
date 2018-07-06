@@ -44,6 +44,9 @@ a {
   color: @black;
   text-decoration: none;
 }
+img {
+  width: 100%;
+}
 .navbar {
   position: absolute;
   height: 6rem;
@@ -226,13 +229,15 @@ a {
   background: white;
   z-index: 9;
   transform: translateY(-100%);
-  &-top {
 
+  &-top {
+    display: none;
   }
   &-bottom {
     top: auto;
     bottom: 0;
     transform: translateY(100%);
+    display: none;
   }
 }
 @-webkit-keyframes rotating /* Safari and Chrome */ {

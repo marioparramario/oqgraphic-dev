@@ -5,6 +5,7 @@ const Home = Barba.BaseView.extend({
   namespace: 'home',
   onEnter: function () {
     const parent = document.getElementById('container');
+    // This are the animations I already call in home.js
     const parallax = new Parallax(parent, {
       invertX: true,
       invertY: true,
@@ -96,29 +97,52 @@ Illustration.init()
 
 
 
-const Work = Barba.BaseView.extend({
-  namespace: 'work',
-  onEnter: function () {
-    var grid = document.getElementById('grid');
-    salvattore.registerGrid(grid);
-      var enterImage = anime({
-        targets: '.something',
-        translateY: ['100%', 0],
-        offset: 1000,
-        duration: 600,
-        elasticity: 600,
-        easing: [.4,0,.2,1],
-    		opacity: [0 ,1],
-        delay: function(el, i) { return i * 40 }
-      });
+// const Work = Barba.BaseView.extend({
+//   namespace: 'work',
+//   onEnter: function () {
+//     var grid = document.getElementById('grid');
+//     salvattore.registerGrid(grid);
+//       var enterImage = anime({
+//         targets: '.something',
+//         translateY: ['100%', 0],
+//         offset: 1000,
+//         duration: 600,
+//         elasticity: 600,
+//         easing: [.4,0,.2,1],
+//     		opacity: [0 ,1],
+//         delay: function(el, i) { return i * 40 }
+//       });
+//
+//     console.log('entering work');
+//   },
+//   onEnterCompleted: function () {},
+//   onLeave: function () {
+//     console.log('leaving work');
+//   },
+//   onLeaveCompleted: function () {}
+// })
+//
+// Work.init()
 
-    console.log('entering work');
+
+const Work2 = Barba.BaseView.extend({
+  namespace: 'work-2',
+  onEnter: function () {
+    var enterImage = anime({
+      targets: '.something',
+      translateX: ['100%', 0],
+      duration: 600,
+      elasticity: 600,
+      easing: [.4,0,.2,1]
+    });
+    // var grid = document.getElementById('grid');
+    // console.log('entering work-2');
   },
   onEnterCompleted: function () {},
   onLeave: function () {
-    console.log('leaving work');
+    // console.log('leaving work-2');
   },
   onLeaveCompleted: function () {}
 })
 
-Work.init()
+Work2.init()

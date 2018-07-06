@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     limitY: 5,
   });
 
-  // 
+  //
   // var homeBackground = anime({
   //   targets: '#container',
   //   translateY: ['100%', 0],
@@ -38,11 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 }, false);
-
-
-
-
-
 
 
 // Force page to start at the top
