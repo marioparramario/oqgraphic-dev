@@ -174,8 +174,7 @@ img {
   }
 }
 
-
-.home {
+[data-namespace="home"] {
   .navbar .nav-wrapper .link-container .nav-link {
     color: white;
   }
@@ -184,6 +183,9 @@ img {
     fill: white;
   }
 }
+// .home {
+//
+// }
 .disabled {
   color: currentColor;
   pointer-events: none;
@@ -228,16 +230,16 @@ img {
   top: 0;
   background: white;
   z-index: 9;
-  transform: translateY(-100%);
+  // transform: translateY(-100%);
 
   &-top {
-    display: none;
+    // display: none;
   }
   &-bottom {
     top: auto;
     bottom: 0;
-    transform: translateY(100%);
-    display: none;
+    // transform: translateY(100%);
+    // display: none;
   }
 }
 @-webkit-keyframes rotating /* Safari and Chrome */ {

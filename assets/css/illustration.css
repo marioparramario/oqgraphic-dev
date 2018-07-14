@@ -117,3 +117,6 @@ html {
   font-size: 1.1rem;
   max-width: 30rem;
 }
+.something {
+  max-width: 720px;
+}

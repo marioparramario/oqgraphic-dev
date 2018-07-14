@@ -45,7 +45,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 }
 
-// Hide navbar on scroll down
+// Hide navbar on scroll down // Currently not working
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;

@@ -159,11 +159,11 @@ img {
   height: 80%;
   background: rgba(255, 255, 255, 0.5);
 }
-.home .navbar .nav-wrapper .link-container .nav-link {
+[data-namespace="home"] .navbar .nav-wrapper .link-container .nav-link {
   color: white;
 }
-.home .navbar .nav-wrapper .logo svg path,
-.home .navbar .nav-wrapper .logo svg polygon {
+[data-namespace="home"] .navbar .nav-wrapper .logo svg path,
+[data-namespace="home"] .navbar .nav-wrapper .logo svg polygon {
   fill: white;
 }
 .disabled {
@@ -195,16 +195,10 @@ img {
   top: 0;
   background: white;
   z-index: 9;
-  transform: translateY(-100%);
-}
-.stripe-top {
-  display: none;
 }
 .stripe-bottom {
   top: auto;
   bottom: 0;
-  transform: translateY(100%);
-  display: none;
 }
 @-webkit-keyframes rotating {
   /* Safari and Chrome */

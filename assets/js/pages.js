@@ -1,5 +1,18 @@
 Barba.Pjax.start();
-
+var stripeTop = anime({
+  targets: '.stripe-top',
+  translateY: '-100%',
+  offset: 200,
+  duration: 800,
+  easing: 'easeInOutQuad'
+});
+var stripeBottom = anime({
+  targets: '.stripe-bottom',
+  translateY: '100%',
+  offset: 200,
+  duration: 800,
+  easing: 'easeInOutQuad'
+});
 
 const Home = Barba.BaseView.extend({
   namespace: 'home',
@@ -12,10 +25,11 @@ const Home = Barba.BaseView.extend({
       limitX: 26,
       limitY: 5,
     });
+
     var homeHeadline = anime({
       targets: '#hello-there h2',
       translateY: [100, 0],
-      offset: 500,
+      offset: 800,
       duration: 600,
       elasticity: 600,
       easing: [.4,0,.2,1],
@@ -25,20 +39,31 @@ const Home = Barba.BaseView.extend({
       targets: '.section-home p',
       translateY: [100, 0],
       opacity: [0.0, 1.0],
-      offset: 800,
+      offset: 1000,
       duration: 800,
       easing: 'easeOutCubic',
       delay: function(el, i) { return i * 80 },
     });
   },
-  onEnterCompleted: function () {},
+  onEnterCompleted: function () {
+    console.log('home compleated');
+  },
   onLeave: function () {
-    // var homeStripe = anime({
-    //   targets: '.stripe',
-    //   translateY: [100, 0],
-    //   opacity: [0.0, 1.0]
-    // });
-    console.log('aco');
+    var stripeTop = anime({
+      targets: '.stripe-top',
+      translateY: '0',
+      offset: 200,
+      duration: 800,
+      easing: 'easeInOutQuad'
+    });
+    var stripeBottom = anime({
+      targets: '.stripe-bottom',
+      translateY: '0',
+      offset: 200,
+      duration: 800,
+      easing: 'easeInOutQuad'
+    });
+    console.log('home leaving');
   },
   onLeaveCompleted: function () {}
 })
@@ -48,28 +73,29 @@ Home.init()
 
 const Illustration = Barba.BaseView.extend({
   namespace: 'illustration',
-  onEnter: function () {
-    var grid = document.getElementById('grid');
-    salvattore.registerGrid(grid);
-      var enterImage = anime({
-        targets: '.grid-item-container',
-        translateY: [110, 0],
-        offset: 200,
-        duration: 600,
-        elasticity: 600,
-        easing: [.4,0,.2,1],
-    		opacity: [0 ,1],
-        delay: function(el, i) { return i * 40 }
-      });
-      (function() {
-        [].slice.call(document.querySelectorAll('.grid-item-container')).forEach(function(stackEl) {
-          new HamalFx(stackEl);
-        });
-      })();
+  onEnter: function () {},
+  onEnterCompleted: function () {
 
-    console.log('entering illustration');
+      var grid = document.getElementById('grid');
+      salvattore.registerGrid(grid);
+        var enterImage = anime({
+          targets: '.grid-item-container',
+          translateY: [110, 0],
+          offset: 200,
+          duration: 600,
+          elasticity: 600,
+          easing: [.4,0,.2,1],
+      		opacity: [0 ,1],
+          delay: function(el, i) { return i * 40 }
+        });
+        (function() {
+          [].slice.call(document.querySelectorAll('.grid-item-container')).forEach(function(stackEl) {
+            new HamalFx(stackEl);
+          });
+        })();
+
+      console.log('entering illustration');
   },
-  onEnterCompleted: function () {},
   onLeave: function () {
     var enterImage = anime({
       targets: '.grid-item-container',
@@ -88,42 +114,6 @@ const Illustration = Barba.BaseView.extend({
 })
 
 Illustration.init()
-
-
-
-
-
-
-
-
-
-// const Work = Barba.BaseView.extend({
-//   namespace: 'work',
-//   onEnter: function () {
-//     var grid = document.getElementById('grid');
-//     salvattore.registerGrid(grid);
-//       var enterImage = anime({
-//         targets: '.something',
-//         translateY: ['100%', 0],
-//         offset: 1000,
-//         duration: 600,
-//         elasticity: 600,
-//         easing: [.4,0,.2,1],
-//     		opacity: [0 ,1],
-//         delay: function(el, i) { return i * 40 }
-//       });
-//
-//     console.log('entering work');
-//   },
-//   onEnterCompleted: function () {},
-//   onLeave: function () {
-//     console.log('leaving work');
-//   },
-//   onLeaveCompleted: function () {}
-// })
-//
-// Work.init()
-
 
 const Work2 = Barba.BaseView.extend({
   namespace: 'work-2',
